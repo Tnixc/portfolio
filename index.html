@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tnixc</title>
+    <link rel="stylesheet" href="nav-style.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" type="image/x-icon" href="/resources/favicon_io/favicon.ico">
+    <script
+      src="https://kit.fontawesome.com/ef7fa73f11.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a>HOME</a></li>
+        <!-- <li><a>CONTACT</a></li> Still under development (I'm not going to fix this)-->
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="title-image">
+        <div class="image-wrapper">
+          <img src="./resources/profile.jpeg" alt="Profile" />
+        </div>
+        <h1>Wassup i'm tnixc</h1>
+        <span>he/him</span>
+      </div>
+      <div class="personal-container">
+        <p>
+          - Studying Form 9 in Hong Kong
+          <br />
+          - Python
+          <br />
+          - HTML & CSS
+          <br />
+          - Learning JS
+          <br />
+        </p>
+      </div>
+      <div class="buttons-container">
+        <a href="https://github.com/tnixc" target="_blank">
+          <i class="fa-brands fa-github"></i>
+          Github
+        </a>
+        <a>
+          <i class="fa-brands fa-discord"></i>
+          Tnixc#0061
+          <button onclick="copy()"class="copy-button"><i class="fa-solid fa-copy" id="icon"></i><i class="icon fa-solid fa-check" id="icon-tick"></i></button>
+        </a>
+      </div>
+    </div>
+    <script defer>
+        var discord = 'Tnixc#0061';
+        function sleep (time) {
+            return new Promise((resolve) => setTimeout(resolve, time));
+        }
+        async function copy() {
+            navigator.clipboard.writeText(discord);
+            document.getElementById('icon').style.transform = 'translateX(-2em)';
+            document.getElementById('icon-tick').style.transform = 'translateX(-2em)';
+            await sleep(2600);
+            document.getElementById('icon').style.transform = 'translateX(0)';
+            document.getElementById('icon-tick').style.transform = 'translateX(0)';
+        }
+    </script>
+  </body>
+</html>
